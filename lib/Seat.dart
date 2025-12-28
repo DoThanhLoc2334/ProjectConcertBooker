@@ -1,6 +1,11 @@
 class Seat {
-  int row;
-  int column;
+  final int row;
+  final int column;
   bool isBooked;
-  bool isDisabled;
+
+  Seat({
+    required this.row,
+    required this.column,
+    this.isBooked = false,
+  });
 }
