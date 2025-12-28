@@ -8,4 +8,8 @@ class Seat {
     required this.column,
     this.isBooked = false,
   });
+  int GetSeatAmount()
+  {
+    return row * column;
+  }
 }
