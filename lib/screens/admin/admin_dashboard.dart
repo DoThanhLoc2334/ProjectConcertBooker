@@ -1,3 +1,5 @@
+import 'package:concertbooker/screens/admin/manage_concert_screen.dart';
+import 'package:concertbooker/screens/admin/manage_seat_screen.dart';
 import 'package:flutter/material.dart';
 
 class AdminDashboard extends StatelessWidget {
@@ -14,11 +16,25 @@ class AdminDashboard extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (_) => const ManageConcertScreen(),
+              ),
+            );
+          },
           child: const Text("Manage Concerts"),
         ),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => const ManageSeatScreen(),
+              ),
+            );
+          },
           child: const Text("Manage Seats"),
         ),
       ],
